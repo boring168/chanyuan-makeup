@@ -101,7 +101,7 @@ function renderServices(services) {
     }
 
     const link = card.querySelector("[data-service-pick]");
-    link.href = `./makeup-booking?service=${encodeURIComponent(service.fullLine || service.title)}`;
+    link.href = `./booking?service=${encodeURIComponent(service.fullLine || service.title)}`;
     servicesGrid.appendChild(card);
   });
 }
