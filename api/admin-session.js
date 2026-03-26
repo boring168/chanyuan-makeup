@@ -1,5 +1,5 @@
 function getAdminKey() {
-  return process.env.BOOKINGS_ADMIN_KEY;
+  return String(process.env.BOOKINGS_ADMIN_KEY || "").trim();
 }
 
 // ── 登录暴力破解防护 ─────────────────────────────────────────────────────
@@ -84,6 +84,9 @@ module.exports = async function handler(req, res) {
     const payload =
       typeof req.body === "string" ? JSON.parse(req.body || "{}") : req.body || {};
     const submittedKey = String(payload.key || "").trim();
+
+    // 安全调试：只记录长度和比对结果，不记录完整密钥值
+    console.log(`[auth] env key len=${adminKey.length} submitted len=${submittedKey.length} match=${adminKey === submittedKey}`);
 
     if (!submittedKey || submittedKey !== adminKey) {
       res.setHeader("Cache-Control", "no-store");

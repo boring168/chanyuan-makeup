@@ -7,6 +7,21 @@ const bookingsBody = document.querySelector("#admin-bookings-body");
 const logoutButton = document.querySelector("#logout-button");
 
 let currentRecords = [];
+let allRecords = [];
+let currentFilter = "all";
+
+function filterRecords(records, filter) {
+  if (filter === "all") return records;
+  return records.filter((r) => (r.business_type || "makeup") === filter);
+}
+
+function createBizBadge(type) {
+  const span = document.createElement("span");
+  const isMakeup = !type || type === "makeup";
+  span.className = `biz-badge biz-badge--${isMakeup ? "makeup" : "nail"}`;
+  span.textContent = isMakeup ? "妆造" : "美甲";
+  return span;
+}
 
 function formatDateTime(value) {
   if (!value) {
@@ -40,7 +55,7 @@ function renderRows(records) {
   if (!records.length) {
     const row = document.createElement("tr");
     const cell = document.createElement("td");
-    cell.colSpan = 10;
+    cell.colSpan = 11;
     cell.textContent = "暂无预约记录";
     row.appendChild(cell);
     bookingsBody.appendChild(row);
@@ -51,6 +66,11 @@ function renderRows(records) {
     const row = document.createElement("tr");
     row.dataset.id = record.id;
     row.appendChild(createCell(formatDateTime(record.created_at)));
+
+    const bizCell = document.createElement("td");
+    bizCell.appendChild(createBizBadge(record.business_type));
+    row.appendChild(bizCell);
+
     row.appendChild(createCell(record.name));
     row.appendChild(createCell(record.contact));
     row.appendChild(createCell(record.service));
@@ -108,7 +128,8 @@ async function loadRecords() {
       throw new Error(result.error || "加载失败");
     }
 
-    renderRows(result.records || []);
+    allRecords = result.records || [];
+    renderRows(filterRecords(allRecords, currentFilter));
     adminStatus.textContent = "预约记录已更新。";
     adminStatus.dataset.state = "success";
   } catch (error) {
@@ -210,6 +231,16 @@ async function deleteRecord(id, row) {
 loadButton.addEventListener("click", loadRecords);
 clearButton.addEventListener("click", clearRecords);
 logoutButton.addEventListener("click", logout);
+
+document.querySelectorAll(".biz-filter__btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    currentFilter = btn.dataset.filter;
+    document.querySelectorAll(".biz-filter__btn").forEach((b) => {
+      b.classList.toggle("biz-filter__btn--active", b === btn);
+    });
+    renderRows(filterRecords(allRecords, currentFilter));
+  });
+});
 
 (async () => {
   try {

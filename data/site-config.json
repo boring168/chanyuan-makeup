@@ -24,7 +24,7 @@
     {
       "tag": "日常妆",
       "title": "日常精致妆",
-      "description": "清透自然，适合通勤、约会、闺蜜聚会。",
+      "description": "适合日常、约会、轻社交场景，干净自然。",
       "price": "99元",
       "duration": "约1.5–2小时",
       "badge": "常用",
@@ -34,7 +34,7 @@
     {
       "tag": "写真妆",
       "title": "写真 / 形象照妆",
-      "description": "上镜精致，适合证件照、写真和形象照拍摄。",
+      "description": "适合拍照、写真、形象照，更精致上镜。",
       "price": "169元",
       "duration": "约2–2.5小时",
       "badge": "常用",
@@ -42,56 +42,65 @@
       "fullLine": "写真 / 形象照妆 169元"
     },
     {
-      "tag": "晚宴妆",
-      "title": "晚宴 / 活动妆",
-      "description": "精致大气，适合正式晚宴、年会和颁奖典礼。",
-      "price": "199元",
-      "duration": "约2–2.5小时",
-      "image": "./assets/services/evening.jpg",
-      "fullLine": "晚宴 / 活动妆 199元"
-    },
-    {
-      "tag": "新娘妆",
-      "title": "新娘整体造型",
-      "description": "婚礼跟妆造型，陪伴新娘度过最重要的时刻。",
-      "price": "299元起",
-      "duration": "约3–4小时",
-      "badge": "精选",
-      "image": "./assets/services/bridal.jpg",
-      "fullLine": "新娘整体造型 299元起"
-    },
-    {
-      "tag": "舞台妆",
-      "title": "舞台 / 演出妆",
-      "description": "表现力更足，适合汇演、话剧、主持和晚会。",
-      "price": "239元起",
-      "duration": "约2–3小时",
-      "image": "./assets/services/stage.jpg",
-      "fullLine": "舞台 / 演出妆 239元起"
+      "tag": "约会妆",
+      "title": "约会妆",
+      "description": "突出气色与氛围感，适合约会、轻聚会。",
+      "price": "139元",
+      "duration": "约1.5–2小时",
+      "image": "./assets/services/date.jpg",
+      "fullLine": "约会妆 139元"
     },
     {
       "tag": "创意妆",
       "title": "创意 / 主题妆",
-      "description": "风格鲜明，适合主题拍摄、古风造型和艺术创作。",
+      "description": "适合主题拍摄、个性风格设计。",
       "price": "299元起",
       "duration": "约2.5–3小时",
       "image": "./assets/services/creative.jpg",
       "fullLine": "创意 / 主题妆 299元起"
     },
     {
-      "tag": "多人妆",
-      "title": "姐妹 / 团队妆",
-      "description": "伴娘团、闺蜜团、活动团队造型，价格按人数另议。",
-      "price": "单独询价",
-      "duration": "按人数安排",
-      "image": "./assets/services/group.jpg",
-      "fullLine": "姐妹 / 团队妆（询价）"
+      "tag": "舞台妆",
+      "title": "舞台 / 演出妆",
+      "description": "适合演出、舞台、灯光环境。",
+      "price": "239元起",
+      "duration": "约2–3小时",
+      "image": "./assets/services/stage.jpg",
+      "fullLine": "舞台 / 演出妆 239元起"
+    },
+    {
+      "tag": "复古妆",
+      "title": "复古妆",
+      "description": "偏港风 / 复古 / 氛围感风格。",
+      "price": "199元",
+      "duration": "约2–2.5小时",
+      "image": "./assets/services/vintage.jpg",
+      "fullLine": "复古妆 199元"
+    },
+    {
+      "tag": "婚礼造型",
+      "title": "新娘妆 / 婚礼跟妆",
+      "description": "适合婚礼、仪式、全天跟妆等，需提前预约沟通。",
+      "price": "299元起",
+      "duration": "约3–4小时",
+      "image": "./assets/services/bridal.jpg",
+      "fullLine": "新娘妆 / 婚礼跟妆 299元起",
+      "wedding": true
     }
   ],
+  "weddingService": {
+    "tag": "婚礼造型",
+    "title": "新娘妆 / 婚礼跟妆",
+    "description": "适合婚礼、仪式、全天跟妆等，需提前预约沟通。",
+    "price": "299元起",
+    "duration": "约3–4小时",
+    "image": "./assets/services/bridal.jpg",
+    "fullLine": "新娘妆 / 婚礼跟妆 299元起",
+    "note": "婚礼档期需提前预约，时长与安排请微信沟通确认。"
+  },
   "extras": [
     "以上均为上门服务，交通费另计",
     "发型造型可加选，需提前沟通",
-    "多人/姐妹妆价格另议，欢迎微信询价",
     "正式档期建议提前1–2周预约"
   ]
 }

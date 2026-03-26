@@ -55,6 +55,12 @@ function getEnv() {
   };
 }
 
+function resolveBusinessType(host) {
+  const h = String(host || "").toLowerCase().split(":")[0];
+  if (h.includes("chanyuanmeijia")) return "nail";
+  return "makeup";
+}
+
 function decodeJwtPayload(token) {
   try {
     const [, payload] = String(token).split(".");
@@ -182,7 +188,7 @@ async function insertBooking(env, booking) {
 
 async function fetchBookings(env) {
   const response = await fetch(
-    `${env.supabaseUrl}/rest/v1/bookings?select=id,name,contact,service,date,time_slot,duration,location,notes,created_at&order=created_at.desc`,
+    `${env.supabaseUrl}/rest/v1/bookings?select=id,name,contact,service,date,time_slot,duration,location,notes,created_at,business_type&order=created_at.desc`,
     {
       headers: createSupabaseHeaders(env.supabaseKey),
     }
@@ -270,6 +276,7 @@ module.exports = async function handler(req, res) {
         location: String(payload.location).trim(),
         notes: String(payload.notes || "").trim(),
         created_at: new Date().toISOString(),
+        business_type: resolveBusinessType(req.headers.host),
       };
 
       const record = await insertBooking(env, booking);

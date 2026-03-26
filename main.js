@@ -68,6 +68,7 @@ function renderServices(services) {
   servicesGrid.innerHTML = "";
 
   services.forEach((service) => {
+    if (service.wedding) return; // 婚礼造型由 renderWedding 单独渲染
     const card = svcCardTemplate.content.firstElementChild.cloneNode(true);
     const imgEl = card.querySelector(".svc-card__img");
     const svcSlug = (service.tag || "").toLowerCase().replace(/[^a-z0-9]/g, "-");
@@ -101,7 +102,7 @@ function renderServices(services) {
     }
 
     const link = card.querySelector("[data-service-pick]");
-    link.href = `./makeup-booking?service=${encodeURIComponent(service.fullLine || service.title)}`;
+    link.href = `./booking?service=${encodeURIComponent(service.fullLine || service.title)}`;
     servicesGrid.appendChild(card);
   });
 }
@@ -114,6 +115,42 @@ function renderExtras(items) {
     listItem.textContent = item;
     extrasList.appendChild(listItem);
   });
+}
+
+function renderWedding(wedding) {
+  const card = document.querySelector("#wedding-card");
+  if (!card || !wedding) return;
+
+  const imgEl = document.querySelector("#wedding-img");
+  if (imgEl) {
+    imgEl.src = wedding.image || SVC_PLACEHOLDER;
+    imgEl.alt = wedding.title;
+    imgEl.onerror = () => {
+      imgEl.onerror = null;
+      imgEl.src = SVC_PLACEHOLDER;
+    };
+  }
+
+  const tagEl = document.querySelector("#wedding-tag");
+  if (tagEl) tagEl.textContent = wedding.tag;
+
+  const titleEl = document.querySelector("#wedding-title");
+  if (titleEl) titleEl.textContent = wedding.title;
+
+  const descEl = document.querySelector("#wedding-desc");
+  if (descEl) descEl.textContent = wedding.description;
+
+  const noteEl = document.querySelector("#wedding-note");
+  if (noteEl) noteEl.textContent = wedding.note || "";
+
+  const priceEl = document.querySelector("#wedding-price");
+  if (priceEl) priceEl.textContent = wedding.price;
+
+  const durationEl = document.querySelector("#wedding-duration");
+  if (durationEl) durationEl.textContent = wedding.duration || "";
+
+  const btn = document.querySelector("#wedding-book-btn");
+  if (btn) btn.href = `./booking?service=${encodeURIComponent(wedding.fullLine || wedding.title)}`;
 }
 
 function openWechatModal(config) {
@@ -170,6 +207,7 @@ async function init() {
   renderIntro(config);
   renderServices(config.services);
   renderExtras(config.extras || []);
+  renderWedding(config.weddingService);
   renderPortfolio(portfolioItems);
 
   setupWechatModal();

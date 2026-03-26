@@ -945,8 +945,8 @@ h1 {
 
 .svc-card__img-wrap {
   flex-shrink: 0;
-  width: 88px;
-  height: 88px;
+  width: 110px;
+  height: 110px;
   border-radius: 14px;
   overflow: hidden;
   background: linear-gradient(
@@ -1091,6 +1091,113 @@ h1 {
   font-size: 20px;
 }
 
+/* ── wedding-card ────────────────────────────────────────────────────── */
+
+.wedding-card {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  display: grid;
+}
+
+.wedding-card__img-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    rgba(216, 187, 164, 0.32),
+    rgba(245, 232, 220, 0.56)
+  );
+}
+
+.wedding-card__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wedding-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 28px 24px 24px;
+}
+
+.wedding-card__body {
+  display: grid;
+  gap: 8px;
+}
+
+.wedding-card__title {
+  margin: 4px 0 0;
+  font-size: clamp(22px, 5vw, 30px);
+}
+
+.wedding-card__desc {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.wedding-card__note {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+  opacity: 0.78;
+  line-height: 1.7;
+}
+
+.wedding-card__aside {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.wedding-card__price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.wedding-card__price {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(28px, 6vw, 36px);
+  font-weight: 700;
+  color: var(--accent-deep);
+  line-height: 1;
+}
+
+.wedding-card__duration {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(139, 105, 89, 0.14);
+  background: rgba(255, 252, 248, 0.7);
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+@media (min-width: 760px) {
+  .wedding-card {
+    grid-template-columns: minmax(260px, 0.44fr) 1fr;
+  }
+
+  .wedding-card__img-wrap {
+    aspect-ratio: auto;
+    min-height: 280px;
+  }
+
+  .wedding-card__content {
+    justify-content: space-between;
+    padding: 32px 32px 28px;
+  }
+}
+
 /* ── booking-header (replaces subpage-hero on booking.html) ──────────── */
 
 .booking-header {
@@ -1134,8 +1241,8 @@ h1 {
   }
 
   .svc-card__img-wrap {
-    width: 92px;
-    height: 92px;
+    width: 120px;
+    height: 120px;
   }
 }
 
@@ -1149,8 +1256,8 @@ h1 {
   }
 
   .svc-card__img-wrap {
-    width: 96px;
-    height: 96px;
+    width: 128px;
+    height: 128px;
     border-radius: 16px;
   }
 }
@@ -1659,6 +1766,65 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+/* ── biz-filter (business type filter bar) ────────────────────────────── */
+
+.biz-filter {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.biz-filter__btn {
+  padding: 7px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--muted);
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.biz-filter__btn:hover {
+  background: #f3f3f3;
+  color: var(--text);
+}
+
+.biz-filter__btn--active {
+  background: var(--text);
+  color: #fff;
+  border-color: transparent;
+}
+
+.biz-filter__btn--active:hover {
+  background: var(--accent-deep, #222);
+}
+
+/* ── biz-badge (business type tag in table) ───────────────────────────── */
+
+.biz-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.biz-badge--makeup {
+  background: rgba(158, 117, 98, 0.12);
+  color: #6b3f35;
+  border: 1px solid rgba(139, 105, 89, 0.22);
+}
+
+.biz-badge--nail {
+  background: rgba(80, 110, 160, 0.1);
+  color: #2d4f7c;
+  border: 1px solid rgba(80, 110, 160, 0.22);
 }
 
 /* ── success modal ────────────────────────────────────────────────────── */

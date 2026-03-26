@@ -49,6 +49,11 @@
                 清空所有记录
               </button>
             </div>
+            <div class="biz-filter" role="group" aria-label="按业务类型筛选">
+              <button class="biz-filter__btn biz-filter__btn--active" data-filter="all" type="button">全部</button>
+              <button class="biz-filter__btn" data-filter="makeup" type="button">妆造</button>
+              <button class="biz-filter__btn" data-filter="nail" type="button">美甲</button>
+            </div>
             <p class="status-text" id="admin-status" role="status" aria-live="polite"></p>
           </div>
 
@@ -57,6 +62,7 @@
               <thead>
                 <tr>
                   <th>提交时间</th>
+                  <th>业务</th>
                   <th>称呼</th>
                   <th>联系方式</th>
                   <th>服务</th>
