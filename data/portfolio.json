@@ -1,0 +1,32 @@
+[
+  {
+    "title": "日常妆",
+    "description": "清透自然，适合日常出行与通勤。",
+    "image": "./assets/portfolio/daily-look.jpg"
+  },
+  {
+    "title": "写真妆",
+    "description": "上镜精致，适合写真与形象照。",
+    "image": "./assets/portfolio/photo-look.jpg"
+  },
+  {
+    "title": "约会妆",
+    "description": "甜美细腻，适合约会与聚会。",
+    "image": "./assets/portfolio/date-look.jpg"
+  },
+  {
+    "title": "创意妆",
+    "description": "风格更强，适合主题创作。",
+    "image": "./assets/portfolio/creative-look.jpg"
+  },
+  {
+    "title": "舞台妆",
+    "description": "表现力更足，适合舞台和活动。",
+    "image": "./assets/portfolio/stage-look.jpg"
+  },
+  {
+    "title": "复古妆",
+    "description": "经典质感，适合复古氛围拍摄。",
+    "image": "./assets/portfolio/vintage-look.jpg"
+  }
+]
