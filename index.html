@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>婵媛造型 | 上门化妆预约</title>
+    <meta
+      name="description"
+      content="婵媛造型，上门化妆造型预约。日常妆、写真妆、新娘妆、舞台妆，支持微信咨询与站内预约。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="site-shell makeup-page">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="婵媛造型首页">
+          <span class="brand__en">CHANYUAN</span>
+          <span class="brand__cn">婵媛造型</span>
+        </a>
+        <nav class="topbar__nav" aria-label="主导航">
+          <a href="#packages">价目表</a>
+          <a href="#portfolio">风格参考</a>
+          <a href="#contact">联系</a>
+          <a href="./booking">预约</a>
+        </nav>
+      </header>
+
+      <main id="top">
+
+        <!-- ── Intro ──────────────────────────────────────────────────── -->
+        <section class="page-intro">
+          <div class="page-intro__text">
+            <p class="eyebrow">Chanyuan Makeup Studio</p>
+            <h1 class="page-intro__title">婵媛造型</h1>
+            <p class="page-intro__tagline" id="brand-intro">专注上门化妆造型，致力于让每一位客户以最好的状态出现在最重要的时刻。</p>
+          </div>
+          <div class="page-intro__actions">
+            <button class="button button--ghost button--sm" type="button" data-wechat-copy>微信咨询</button>
+            <a class="button button--primary button--sm" href="./booking">立即预约</a>
+          </div>
+        </section>
+
+        <!-- ── Services ──────────────────────────────────────────────── -->
+        <section class="section" id="packages">
+          <div class="section-head">
+            <p class="eyebrow">Services</p>
+            <h2>服务内容</h2>
+            <p id="services-summary">上门化妆 · 精致造型 · 灵活预约</p>
+          </div>
+          <div class="svc-list" id="services-grid"></div>
+          <div class="extras-panel card" id="extras-panel">
+            <p class="eyebrow">Notes</p>
+            <h3>说明</h3>
+            <ul class="detail-list" id="extras-list"></ul>
+          </div>
+        </section>
+
+        <!-- ── Portfolio ─────────────────────────────────────────────── -->
+        <section class="section" id="portfolio">
+          <div class="section-head">
+            <p class="eyebrow">Portfolio</p>
+            <h2>风格参考</h2>
+            <p>部分妆容风格展示，具体妆感可微信发图沟通。</p>
+          </div>
+          <div class="portfolio-grid" id="portfolio-grid"></div>
+        </section>
+
+        <!-- ── Contact ───────────────────────────────────────────────── -->
+        <section class="section" id="contact">
+          <div class="section-head">
+            <p class="eyebrow">Contact</p>
+            <h2>联系方式</h2>
+            <p>有妆感参考图或档期问题，可以直接微信发给我。</p>
+          </div>
+          <div class="contact-layout">
+            <article class="card contact-card">
+              <p class="eyebrow">Wechat</p>
+              <h3 id="wechat-value">StillinLoveWithYouH</h3>
+              <p id="contact-note">如果还没确定服务内容，欢迎先微信沟通妆感、日期和区域。</p>
+              <div class="action-row">
+                <button class="button button--primary" type="button" data-wechat-copy>复制微信号</button>
+                <a class="button button--ghost" href="./booking">去预约</a>
+              </div>
+            </article>
+            <article class="card contact-card">
+              <p class="eyebrow">How It Works</p>
+              <h3>预约流程</h3>
+              <ul class="detail-list">
+                <li>微信沟通或直接站内提交预约</li>
+                <li>确认服务类型、日期、区域</li>
+                <li>确认后上门服务</li>
+              </ul>
+            </article>
+          </div>
+
+          <article class="payment-panel card" id="payment-panel" hidden>
+            <div class="payment-panel__copy">
+              <p class="eyebrow">Payment</p>
+              <h3>收款码</h3>
+              <p id="payment-copy">确认档期后，如需支付定金或尾款，可直接扫码。</p>
+            </div>
+            <div class="payment-panel__image">
+              <img id="payment-image" alt="婵媛造型收款码" loading="lazy" />
+            </div>
+          </article>
+        </section>
+
+      </main>
+
+      <footer class="site-footer">
+        <p>婵媛造型</p>
+        <p>上门化妆 · 预约制 · <span id="city-value">北京</span></p>
+      </footer>
+
+      <div class="mobile-action-bar">
+        <button class="button button--ghost mobile-action-bar__button" type="button" data-wechat-copy>
+          微信咨询
+        </button>
+        <a class="button button--primary mobile-action-bar__button" href="./booking">立即预约</a>
+      </div>
+    </div>
+
+    <!-- ── Templates ─────────────────────────────────────────────────── -->
+
+    <template id="svc-card-template">
+      <article class="svc-card card">
+        <div class="svc-card__img-wrap">
+          <img class="svc-card__img" alt="" loading="lazy" />
+        </div>
+        <div class="svc-card__body">
+          <div class="svc-card__meta">
+            <span class="svc-card__tag"></span>
+            <span class="svc-card__duration"></span>
+            <span class="svc-card__badge" hidden></span>
+          </div>
+          <h3 class="svc-card__title"></h3>
+          <p class="svc-card__scene"></p>
+        </div>
+        <div class="svc-card__aside">
+          <p class="svc-card__price"></p>
+          <a class="button button--primary button--sm svc-card__book-btn" data-service-pick>预约</a>
+        </div>
+      </article>
+    </template>
+
+    <template id="portfolio-card-template">
+      <article class="portfolio-card card">
+        <div class="portfolio-card__image">
+          <img alt="" loading="lazy" />
+        </div>
+        <div class="portfolio-card__body">
+          <h3></h3>
+          <p></p>
+        </div>
+      </article>
+    </template>
+
+    <script src="./main.js" type="module"></script>
+
+    <!-- ── WeChat modal ──────────────────────────────────────────────── -->
+    <div id="wechat-modal" class="wechat-modal" role="dialog" aria-modal="true" aria-label="微信咨询" hidden>
+      <div class="wechat-modal__overlay"></div>
+      <div class="wechat-modal__card">
+        <button class="wechat-modal__close" type="button" aria-label="关闭">×</button>
+        <p class="eyebrow">添加微信咨询</p>
+        <img class="wechat-modal__qr" id="wechat-modal-qr" alt="婵媛造型微信二维码" hidden />
+        <p class="wechat-modal__id" id="wechat-modal-id"></p>
+        <button class="button button--primary wechat-modal__copy-btn" id="wechat-modal-copy" type="button">复制微信号</button>
+        <p class="wechat-modal__hint" id="wechat-modal-copy-status"></p>
+      </div>
+    </div>
+  </body>
+</html>

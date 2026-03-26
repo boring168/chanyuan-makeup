@@ -1,0 +1,9 @@
+{
+  "name": "web3-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {},
+  "engines": {
+    "node": ">=18"
+  }
+}

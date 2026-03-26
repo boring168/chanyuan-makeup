@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>婵媛造型 | 记录查看登录</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="./index.html" aria-label="返回婵媛造型首页">
+          <span class="brand__en">CHANYUAN</span>
+          <span class="brand__cn">婵媛造型</span>
+        </a>
+        <a class="button button--secondary button--sm" href="./index.html">返回首页</a>
+      </header>
+
+      <main class="subpage-main auth-main">
+        <section class="auth-card card">
+          <p class="eyebrow">Private Access</p>
+          <h1>内部记录登录</h1>
+          <p>这个页面只给化妆师本人使用。输入管理密钥后，才可查看预约记录。</p>
+
+          <form id="records-login-form" class="form-card auth-form">
+            <label class="form-card__full">
+              <span>管理密钥</span>
+              <input type="password" name="key" id="admin-key-input" placeholder="输入 BOOKINGS_ADMIN_KEY" required />
+            </label>
+
+            <div class="form-card__full form-card__actions">
+              <button class="button button--primary" type="submit">进入记录页</button>
+              <p class="status-text" id="login-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script src="./records-login.js" type="module"></script>
+  </body>
+</html>

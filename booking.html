@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>婵媛造型 | 站内预约</title>
+    <meta
+      name="description"
+      content="婵媛造型站内预约页，先选服务，再填写日期、时间段、预计时长、区域和联系方式。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="site-shell makeup-page">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="返回婵媛造型首页">
+          <span class="brand__en">CHANYUAN</span>
+          <span class="brand__cn">婵媛造型</span>
+        </a>
+        <nav class="topbar__nav" aria-label="预约页导航">
+          <a href="#packages">价目表</a>
+          <a href="#portfolio">风格参考</a>
+          <a href="#booking-form">预约</a>
+          <a href="#contact">联系</a>
+        </nav>
+      </header>
+
+      <main class="subpage-main">
+        <div class="booking-header">
+          <div class="booking-header__text">
+            <p class="eyebrow">婵媛造型 · 在线预约</p>
+            <h1 class="booking-header__title">预约上门化妆</h1>
+          </div>
+          <a class="button button--ghost button--sm" href="#packages">← 返回服务列表</a>
+        </div>
+
+        <div class="booking-service-banner card" id="booking-service-banner" hidden>
+          <span class="eyebrow">你正在预约</span>
+          <strong id="booking-service-name"></strong>
+        </div>
+
+        <section class="service-picks card">
+          <div>
+            <p class="eyebrow">Choose Service</p>
+            <p class="section-copy">先点中最接近的价目项目，再往下填写预约信息。</p>
+          </div>
+          <div class="service-picks__list" id="service-picks"></div>
+        </section>
+
+        <section class="booking-page-grid">
+          <form class="form-card card" id="booking-form">
+            <div class="form-card__full form-section-label">
+              <p class="eyebrow">填写预约信息</p>
+            </div>
+
+            <label>
+              <span>服务类型</span>
+              <select name="service" id="service-select" required>
+                <option value="">请选择服务类型</option>
+              </select>
+            </label>
+
+            <label>
+              <span>预约日期</span>
+              <input type="date" name="date" id="date-input" required />
+            </label>
+
+            <label>
+              <span>时间段</span>
+              <select name="timeSlot" required>
+                <option value="">请选择时间段</option>
+                <option value="上午">上午</option>
+                <option value="下午">下午</option>
+                <option value="晚上">晚上</option>
+                <option value="全天可协商">全天可协商</option>
+              </select>
+            </label>
+
+            <label>
+              <span>预计服务时长</span>
+              <select name="duration" required>
+                <option value="">请选择预计服务时长</option>
+                <option value="1小时内">1小时内</option>
+                <option value="2小时内">2小时内</option>
+                <option value="半天（约3-4小时）">半天（约3-4小时）</option>
+                <option value="全天">全天</option>
+                <option value="需要沟通确认">需要沟通确认</option>
+              </select>
+            </label>
+
+            <label>
+              <span>区域 / 地址</span>
+              <input type="text" name="location" placeholder="例如：北京朝阳 / 海淀" maxlength="100" required />
+            </label>
+
+            <label>
+              <span>微信号 / 手机号</span>
+              <input type="text" name="contact" placeholder="填写一个常用联系方式" maxlength="50" required />
+            </label>
+
+            <label>
+              <span>称呼</span>
+              <input type="text" name="name" placeholder="例如：林小姐" maxlength="50" required />
+            </label>
+
+            <label class="form-card__full">
+              <span>备注</span>
+              <textarea
+                name="notes"
+                rows="5"
+                maxlength="300"
+                placeholder="例如：希望的妆感、活动类型、是否需要发型、是否多人等"
+              ></textarea>
+            </label>
+
+            <div class="form-card__full form-card__actions">
+              <button class="button button--primary form-submit-btn" type="submit">确认提交预约</button>
+              <button class="button button--ghost" type="button" data-wechat-copy>复制微信号</button>
+              <p class="inline-note" id="booking-hint">提交后可继续微信沟通具体细节。</p>
+              <p class="status-text" id="booking-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+
+          <aside class="booking-side">
+            <article class="card info-card">
+              <p class="eyebrow">Wechat</p>
+              <h3 id="wechat-value">StillinLoveWithYouH</h3>
+              <p id="contact-note">如果你还没完全确定服务内容，建议先微信沟通妆感、日期和区域。</p>
+              <button class="button button--ghost" type="button" data-wechat-copy>复制微信号</button>
+            </article>
+
+            <article class="card info-card">
+              <p class="eyebrow">Before Submit</p>
+              <h3>填单前确认</h3>
+              <ul class="detail-list">
+                <li>先选服务，再填日期和时间段</li>
+                <li>预计时长越准确越容易确认是否能接</li>
+                <li>区域越清楚越方便判断安排</li>
+              </ul>
+            </article>
+
+            <article class="card info-card" id="payment-panel" hidden>
+              <p class="eyebrow">Payment</p>
+              <h3>收款码</h3>
+              <p id="payment-copy">确认档期后，如需支付定金或尾款，可直接扫码。</p>
+              <img id="payment-image" alt="婵媛造型收款码" loading="lazy" />
+            </article>
+          </aside>
+        </section>
+      </main>
+
+      <div class="mobile-action-bar">
+        <button class="button button--ghost mobile-action-bar__button" type="button" data-wechat-copy>
+          微信咨询
+        </button>
+        <button class="button button--primary mobile-action-bar__button" type="button" id="scroll-to-form-button">
+          去预约
+        </button>
+      </div>
+    </div>
+
+    <script src="./booking.js" type="module"></script>
+
+    <div id="success-modal" class="success-modal" role="dialog" aria-modal="true" aria-label="预约提交成功" hidden>
+      <div class="success-modal__overlay"></div>
+      <div class="success-modal__card">
+        <div class="success-modal__top">
+          <p class="success-modal__tagline">已提交成功，也可加微信继续沟通细节</p>
+          <button class="button button--ghost button--sm success-modal__copy-wechat" id="success-modal-copy-wechat" type="button">复制微信号</button>
+          <button class="success-modal__close" type="button" aria-label="关闭">×</button>
+        </div>
+        <div class="success-modal__body">
+          <p class="success-modal__title">预约提交成功 ✓</p>
+          <p class="success-modal__desc">我们已收到你的预约信息，可继续微信沟通细节。</p>
+          <p class="success-modal__id" id="success-modal-id"></p>
+        </div>
+        <div class="success-modal__actions">
+          <a class="button button--ghost" href="#packages">返回首页</a>
+          <button class="button button--primary" id="success-modal-wechat" type="button">微信咨询</button>
+        </div>
+        <p class="success-modal__copy-status" id="success-modal-copy-status"></p>
+      </div>
+    </div>
+
+    <div id="wechat-modal" class="wechat-modal" role="dialog" aria-modal="true" aria-label="微信咨询" hidden>
+      <div class="wechat-modal__overlay"></div>
+      <div class="wechat-modal__card">
+        <button class="wechat-modal__close" type="button" aria-label="关闭">×</button>
+        <p class="eyebrow">添加微信咨询</p>
+        <img class="wechat-modal__qr" id="wechat-modal-qr" alt="婵媛造型微信二维码" hidden />
+        <p class="wechat-modal__id" id="wechat-modal-id"></p>
+        <button class="button button--primary wechat-modal__copy-btn" id="wechat-modal-copy" type="button">复制微信号</button>
+        <p class="wechat-modal__hint" id="wechat-modal-copy-status"></p>
+      </div>
+    </div>
+  </body>
+</html>
