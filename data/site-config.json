@@ -22,6 +22,15 @@
   ],
   "services": [
     {
+      "tag": "证件照妆",
+      "title": "工作 / 证件照妆",
+      "description": "适合通勤职业形象、简历照、证件照、上镜拍摄，整体干净利落、自然精神。",
+      "price": "89元",
+      "duration": "约1–1.5小时",
+      "image": "./assets/services/work.jpg",
+      "fullLine": "工作 / 证件照妆 89元"
+    },
+    {
       "tag": "日常妆",
       "title": "日常精致妆",
       "description": "适合日常、约会、轻社交场景，干净自然。",
@@ -76,6 +85,15 @@
       "duration": "约2–2.5小时",
       "image": "./assets/services/vintage.jpg",
       "fullLine": "复古妆 199元"
+    },
+    {
+      "tag": "新婚妆",
+      "title": "新婚妆",
+      "description": "适合婚礼、新娘跟妆、仪式造型等，建议提前预约沟通。",
+      "price": "299元起",
+      "duration": "约3–4小时",
+      "image": "./assets/services/bridal.jpg",
+      "fullLine": "新婚妆 299元起"
     },
     {
       "tag": "婚礼造型",
