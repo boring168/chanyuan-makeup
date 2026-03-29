@@ -3,7 +3,7 @@
     "name": "婵媛造型",
     "intro": "上门化妆，现在是起号阶段，前几位按体验价接，想预约直接发日期和位置。"
   },
-  "servicesSummary": "新客体验价 · 仅限前 10 位",
+  "servicesSummary": "新客体验价",
   "contact": {
     "wechat": "StillinLoveWithYouH",
     "city": "长春",
@@ -22,34 +22,34 @@
   ],
   "services": [
     {
-      "tag": "日常通勤",
-      "title": "日常通勤妆",
-      "description": "干净自然，适合上班、出门、简单见人。",
-      "price": "69元",
+      "tag": "日常基础",
+      "title": "日常基础妆",
+      "description": "适合简单出门、基础整理。",
+      "price": "59元",
       "duration": "约1–1.5小时",
-      "badge": "最受欢迎",
       "image": "./assets/services/daily.jpg",
-      "fullLine": "日常通勤妆 69元",
+      "fullLine": "日常基础妆 59元",
       "businessType": "makeup"
     },
     {
-      "tag": "约会精致",
-      "title": "约会精致妆",
-      "description": "显气色、更上镜，适合约会、聚会。",
-      "price": "89元",
+      "tag": "精致约会",
+      "title": "精致约会妆",
+      "description": "含睫毛 + 简单整理，更适合约会 / 聚会 / 见人。",
+      "price": "79元",
       "duration": "约1.5–2小时",
+      "badge": "主推",
       "image": "./assets/services/date.jpg",
-      "fullLine": "约会精致妆 89元",
+      "fullLine": "精致约会妆 79元",
       "businessType": "makeup"
     },
     {
-      "tag": "拍照妆",
-      "title": "拍照妆",
-      "description": "更适合拍照和近距离看妆面细节。",
+      "tag": "拍照上镜",
+      "title": "拍照上镜妆",
+      "description": "更适合拍照、出片和妆面细节。",
       "price": "99元",
       "duration": "约1.5–2小时",
       "image": "./assets/services/photo.jpg",
-      "fullLine": "拍照妆 99元",
+      "fullLine": "拍照上镜妆 99元",
       "businessType": "makeup"
     },
     {
@@ -96,8 +96,8 @@
     "note": "婚礼档期需提前预约，时长与安排请微信沟通确认。"
   },
   "extras": [
-    "新客体验价，仅限前 10 位",
+    "新客体验价，仅限前10位",
     "长春主城区可上门，偏远地区补路费",
-    "请至少提前 1 天预约"
+    "请至少提前预约"
   ]
 }
