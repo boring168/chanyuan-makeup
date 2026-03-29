@@ -29,7 +29,8 @@
       "duration": "约1–1.5小时",
       "badge": "最受欢迎",
       "image": "./assets/services/daily.jpg",
-      "fullLine": "日常通勤妆 69元"
+      "fullLine": "日常通勤妆 69元",
+      "businessType": "makeup"
     },
     {
       "tag": "约会精致",
@@ -38,7 +39,8 @@
       "price": "89元",
       "duration": "约1.5–2小时",
       "image": "./assets/services/date.jpg",
-      "fullLine": "约会精致妆 89元"
+      "fullLine": "约会精致妆 89元",
+      "businessType": "makeup"
     },
     {
       "tag": "拍照妆",
@@ -47,7 +49,8 @@
       "price": "99元",
       "duration": "约1.5–2小时",
       "image": "./assets/services/photo.jpg",
-      "fullLine": "拍照妆 99元"
+      "fullLine": "拍照妆 99元",
+      "businessType": "makeup"
     },
     {
       "tag": "基础妆发",
@@ -56,7 +59,8 @@
       "price": "129元",
       "duration": "约2–2.5小时",
       "image": "./assets/services/work.jpg",
-      "fullLine": "基础妆发 129元"
+      "fullLine": "基础妆发 129元",
+      "businessType": "makeup"
     },
     {
       "tag": "婚礼造型",
@@ -66,7 +70,19 @@
       "duration": "约3–4小时",
       "image": "./assets/services/bridal.jpg",
       "fullLine": "新娘妆 / 婚礼跟妆 299元起",
-      "wedding": true
+      "wedding": true,
+      "businessType": "makeup"
+    }
+    },
+    {
+      "tag": "套餐服务",
+      "title": "妆造 + 美甲套餐",
+      "description": "适合约会、拍照、聚会前一次性整理，省时间更方便。",
+      "price": "168元",
+      "duration": "约3小时",
+      "image": "./assets/services/combo.jpg",
+      "fullLine": "妆造 + 美甲套餐 168元",
+      "businessType": "makeup"
     }
   ],
   "weddingService": {
