@@ -1,13 +1,13 @@
 {
   "brand": {
     "name": "婵媛造型",
-    "intro": "专注上门化妆造型，致力于让每一位客户以最好的状态出现在最重要的时刻。"
+    "intro": "上门化妆，现在是起号阶段，前几位按体验价接，想预约直接发日期和位置。"
   },
-  "servicesSummary": "上门化妆 · 精致造型 · 灵活预约",
+  "servicesSummary": "新客体验价 · 仅限前 10 位",
   "contact": {
     "wechat": "StillinLoveWithYouH",
-    "city": "北京",
-    "note": "如果还没确定服务内容，欢迎先微信沟通妆感、日期和区域。"
+    "city": "长春",
+    "note": "直接发我你的时间和位置，今天能约就约。"
   },
   "wechatQrImage": "./assets/wechat/wechat-qr.jpg",
   "paymentQrImage": "./assets/payment/payment-qr.jpg",
@@ -22,78 +22,41 @@
   ],
   "services": [
     {
-      "tag": "证件照妆",
-      "title": "工作 / 证件照妆",
-      "description": "适合通勤职业形象、简历照、证件照、上镜拍摄，整体干净利落、自然精神。",
-      "price": "89元",
+      "tag": "日常通勤",
+      "title": "日常通勤妆",
+      "description": "干净自然，适合上班、出门、简单见人。",
+      "price": "69元",
       "duration": "约1–1.5小时",
-      "image": "./assets/services/work.jpg",
-      "fullLine": "工作 / 证件照妆 89元"
-    },
-    {
-      "tag": "日常妆",
-      "title": "日常精致妆",
-      "description": "适合日常、约会、轻社交场景，干净自然。",
-      "price": "99元",
-      "duration": "约1.5–2小时",
-      "badge": "常用",
+      "badge": "最受欢迎",
       "image": "./assets/services/daily.jpg",
-      "fullLine": "日常精致妆 99元"
+      "fullLine": "日常通勤妆 69元"
     },
     {
-      "tag": "写真妆",
-      "title": "写真 / 形象照妆",
-      "description": "适合拍照、写真、形象照，更精致上镜。",
-      "price": "169元",
-      "duration": "约2–2.5小时",
-      "badge": "常用",
-      "image": "./assets/services/photo.jpg",
-      "fullLine": "写真 / 形象照妆 169元"
-    },
-    {
-      "tag": "约会妆",
-      "title": "约会妆",
-      "description": "突出气色与氛围感，适合约会、轻聚会。",
-      "price": "139元",
+      "tag": "约会精致",
+      "title": "约会精致妆",
+      "description": "显气色、更上镜，适合约会、聚会。",
+      "price": "89元",
       "duration": "约1.5–2小时",
       "image": "./assets/services/date.jpg",
-      "fullLine": "约会妆 139元"
+      "fullLine": "约会精致妆 89元"
     },
     {
-      "tag": "创意妆",
-      "title": "创意 / 主题妆",
-      "description": "适合主题拍摄、个性风格设计。",
-      "price": "299元起",
-      "duration": "约2.5–3小时",
-      "image": "./assets/services/creative.jpg",
-      "fullLine": "创意 / 主题妆 299元起"
+      "tag": "拍照妆",
+      "title": "拍照妆",
+      "description": "更适合拍照和近距离看妆面细节。",
+      "price": "99元",
+      "duration": "约1.5–2小时",
+      "image": "./assets/services/photo.jpg",
+      "fullLine": "拍照妆 99元"
     },
     {
-      "tag": "舞台妆",
-      "title": "舞台 / 演出妆",
-      "description": "适合演出、舞台、灯光环境。",
-      "price": "239元起",
-      "duration": "约2–3小时",
-      "image": "./assets/services/stage.jpg",
-      "fullLine": "舞台 / 演出妆 239元起"
-    },
-    {
-      "tag": "复古妆",
-      "title": "复古妆",
-      "description": "偏港风 / 复古 / 氛围感风格。",
-      "price": "199元",
+      "tag": "基础妆发",
+      "title": "基础妆发",
+      "description": "适合约会、聚会、拍照前整体整理。",
+      "price": "129元",
       "duration": "约2–2.5小时",
-      "image": "./assets/services/vintage.jpg",
-      "fullLine": "复古妆 199元"
-    },
-    {
-      "tag": "新婚妆",
-      "title": "新婚妆",
-      "description": "适合婚礼、新娘跟妆、仪式造型等，建议提前预约沟通。",
-      "price": "299元起",
-      "duration": "约3–4小时",
-      "image": "./assets/services/bridal.jpg",
-      "fullLine": "新婚妆 299元起"
+      "image": "./assets/services/work.jpg",
+      "fullLine": "基础妆发 129元"
     },
     {
       "tag": "婚礼造型",
@@ -117,8 +80,8 @@
     "note": "婚礼档期需提前预约，时长与安排请微信沟通确认。"
   },
   "extras": [
-    "以上均为上门服务，交通费另计",
-    "发型造型可加选，需提前沟通",
-    "正式档期建议提前1–2周预约"
+    "新客体验价，仅限前 10 位",
+    "长春主城区可上门，偏远地区补路费",
+    "请至少提前 1 天预约"
   ]
 }
