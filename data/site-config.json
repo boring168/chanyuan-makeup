@@ -22,34 +22,33 @@
   ],
   "services": [
     {
-      "tag": "日常通勤",
-      "title": "日常妆",
+      "tag": "日常基础",
+      "title": "日常基础妆",
       "description": "干净自然，适合上班、出门、简单见人。",
-      "price": "69元",
+      "price": "59元",
       "duration": "约1–1.5小时",
-      "badge": "最受欢迎",
       "image": "./assets/services/daily.jpg",
-      "fullLine": "日常妆 69元",
+      "fullLine": "日常基础妆 59元",
       "businessType": "makeup"
     },
     {
-      "tag": "约会精致",
-      "title": "约会妆",
-      "description": "显气色、更上镜，适合约会、聚会。",
-      "price": "89元",
+      "tag": "精致约会",
+      "title": "精致约会妆",
+      "description": "显气色、更上镜，适合约会、聚会、见人。",
+      "price": "79元",
       "duration": "约1.5–2小时",
       "image": "./assets/services/date.jpg",
-      "fullLine": "约会妆 89元",
+      "fullLine": "精致约会妆 79元",
       "businessType": "makeup"
     },
     {
-      "tag": "拍照妆",
-      "title": "拍照妆",
+      "tag": "拍照上镜",
+      "title": "拍照上镜妆",
       "description": "更适合拍照和近距离看妆面细节。",
       "price": "99元",
       "duration": "约1.5–2小时",
       "image": "./assets/services/photo.jpg",
-      "fullLine": "拍照妆 99元",
+      "fullLine": "拍照上镜妆 99元",
       "businessType": "makeup"
     },
     {
@@ -63,37 +62,16 @@
       "businessType": "makeup"
     },
     {
-      "tag": "婚礼造型",
-      "title": "新娘妆 / 婚礼跟妆",
-      "description": "适合婚礼、仪式、全天跟妆等，需提前预约沟通。",
-      "price": "299元起",
-      "duration": "约3–4小时",
-      "image": "./assets/services/bridal.jpg",
-      "fullLine": "新娘妆 / 婚礼跟妆 299元起",
-      "wedding": true,
-      "businessType": "makeup"
-    },
-    {
       "tag": "套餐服务",
-      "title": "基础化妆 + 基础美甲",
-      "description": "适合约会、聚会、见人前一次性整理，省时间更方便。",
-      "price": "168元",
+      "title": "精致约会妆 + 纯色基础美甲",
+      "description": "适合约会、聚会、见人前一次性整理，更省时。",
+      "price": "129元",
       "duration": "约3小时",
       "image": "./assets/services/stage.jpg",
-      "fullLine": "基础化妆 + 基础美甲 168元",
+      "fullLine": "精致约会妆 + 纯色基础美甲 129元",
       "businessType": "makeup"
     }
   ],
-  "weddingService": {
-    "tag": "婚礼造型",
-    "title": "新娘妆 / 婚礼跟妆",
-    "description": "适合婚礼、仪式、全天跟妆等，需提前预约沟通。",
-    "price": "299元起",
-    "duration": "约3–4小时",
-    "image": "./assets/services/bridal.jpg",
-    "fullLine": "新娘妆 / 婚礼跟妆 299元起",
-    "note": "婚礼档期需提前预约，时长与安排请微信沟通确认。"
-  },
   "extras": [
     "新客体验价，仅限前10位",
     "长春主城区可上门，偏远地区补路费",
